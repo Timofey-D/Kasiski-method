@@ -9,11 +9,11 @@ public class VinegarMethod {
     private Key key;
     private Alphabet language;
     private String encryption;
-    private String dencryption;
+    private String decryption;
     /**
     * <p>Variable determines what action will apply to the text: encryption or decryption<p/>
-     * @true: encryption
-     * @false: decryption
+     * @true encryption
+     * @false decryption
     * */
     private boolean action = true;
 
@@ -33,7 +33,7 @@ public class VinegarMethod {
         if (action)
             this.encryption = encryptData(this.text, this.key, this.language);
         else
-            this.dencryption = decryptData(this.text, this.key, this.language);
+            this.decryption = decryptData(this.text, this.key, this.language);
     }
 
     public Text getText() {
@@ -48,8 +48,9 @@ public class VinegarMethod {
         return action;
     }
 
-    /*
+    /**
      * This method allows to encrypt some texts using Vinegar cipher.
+     * @Returns an encryption string.
      * */
     private String encryptData(Text text, Key key, Alphabet language) {
         StringBuilder result = new StringBuilder();
@@ -57,31 +58,44 @@ public class VinegarMethod {
             int cipherText = (language.getLetterPosition(text.toString().charAt(i)) + language.getLetterPosition(key.toString().charAt(i % key.getLength()))) % language.getAlphabetLength();
             if (language.capitalLetter(text.toString().charAt(i)))
                 result.append(language.getCapitalLetterByPosition(cipherText));
-            if (language.lowLetter(text.toString().charAt(i)))
+            else
                 result.append(language.getLowLetterByPosition(cipherText));
         }
-        return result.toString();
+        return recoverText(result).toString();
     }
 
+    /**
+     * This method allows to decrypt some texts using Vinegar cipher.
+     * @Returns an decryption string.
+     * */
     private String decryptData(Text text, Key key, Alphabet language) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < text.getLength(); i++) {
-            int difference = (language.getLetterPosition(text.toString().charAt(i)) - language.getLetterPosition(key.toString().charAt(i % key.getLength())));
-            int plainText = difference < 0 ? (difference + language.getAlphabetLength()) % language.getAlphabetLength() : difference % language.getAlphabetLength();
+            int difference = (language.getLetterPosition(text.toString().charAt(i)) - language.getLetterPosition(key.toString().charAt(i % key.getLength()))) ;
+            int plainText = difference < 0 ? (difference + language.getAlphabetLength()) % language.getAlphabetLength() : (difference) % language.getAlphabetLength();
             if (language.capitalLetter(text.toString().charAt(i)))
                 result.append(language.getCapitalLetterByPosition(plainText));
-            if (language.lowLetter(text.toString().charAt(i)))
+            else
                 result.append(language.getLowLetterByPosition(plainText));
         }
-        return result.toString();
+        return recoverText(result).toString();
+    }
+
+    private StringBuilder recoverText(StringBuilder decryption) {
+        for (int i = 0; i < text.getPrimaryText().length(); i++) {
+            if ( !(language.capitalLetter(text.getPrimaryText().charAt(i)) ||
+                    language.lowLetter(text.getPrimaryText().charAt(i))) )
+                decryption.insert(i, text.getPrimaryText().charAt(i));
+        }
+        return decryption;
     }
 
     public String getEncryption() {
         return encryption;
     }
 
-    public String getDencryption() {
-        return dencryption;
+    public String getDecryption() {
+        return decryption;
     }
 
     @Override
@@ -89,7 +103,7 @@ public class VinegarMethod {
         if (action)
             return encryption;
         else
-            return dencryption;
+            return decryption;
     }
 }
 
