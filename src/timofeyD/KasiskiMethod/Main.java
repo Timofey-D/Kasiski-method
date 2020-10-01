@@ -1,5 +1,7 @@
 package timofeyD.KasiskiMethod;
 
+import java.io.IOException;
+
 /**
 * <i><h1>This program encrypts or decrypts any texts, which a user has written.<h1/><i/>
  * <p>Program will consist of several classes, which work together.<p/>
@@ -11,33 +13,30 @@ package timofeyD.KasiskiMethod;
  * <p>class Alphabet: class contains an alphabet<p/>
  * */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Alphabet hebrew = new Alphabet("He");
         Text text_1 = new Text("שלום, שמי טימופיי! מה נשמע?");
         Key key_1 = new Key("כלב");
-        VinegarMethod encryption_1 = new VinegarMethod(text_1, key_1, hebrew, true);
-        System.out.println("encryption: " + encryption_1);
-        VinegarMethod decryption_1 = new VinegarMethod(new Text(encryption_1.getEncryption()), key_1, hebrew, false);
-        System.out.println("decryption: " + decryption_1);
-
-        System.out.println("____________________________________");
+        printVinegareMethod(hebrew, text_1, key_1);
 
         Alphabet english = new Alphabet("En");
         Text text_2 = new Text("Hello, my name is Timofey! I have a sister and two brothers.");
-        Key key_2 = new Key("fgvhjk");
-        VinegarMethod encryption_2 = new VinegarMethod(text_2, key_2, english, true);
-        System.out.println("encryption: " + encryption_2);
-        VinegarMethod decryption_2 = new VinegarMethod(new Text(encryption_2.getEncryption()), key_2, english, false);
-        System.out.println("decryption: " + decryption_2);
-
-        System.out.println("____________________________________");
+        Key key_2 = new Key("dogiscat");
+        printVinegareMethod(english, text_2, key_2);
 
         Alphabet russian = new Alphabet("Ru");
         Text text_3 = new Text("Привет, меня зовут Тимофей, как твое имя?");
-        Key key_3 = new Key("педик");
-        VinegarMethod encryption_3 = new VinegarMethod(text_3, key_3, russian, true);
-        System.out.println("encryption: " + encryption_3);
-        VinegarMethod decryption_3 = new VinegarMethod(new Text(encryption_3.getEncryption()), key_3, russian, false);
-        System.out.println("decryption: " + decryption_3);
+        Key key_3 = new Key("можно пожалуйста без мата");
+        printVinegareMethod(russian, text_3, key_3);
+
+    }
+
+    public static void printVinegareMethod(Alphabet russian, Text text_3, Key key_3) {
+        VinegarMethod encryption = new VinegarMethod(text_3, key_3, russian, true);
+        VinegarMethod decryption = new VinegarMethod(new Text(encryption.getEncryption()), key_3, russian, false);
+        System.out.println("Key: " + key_3);
+        System.out.println("encryption: " + encryption);
+        System.out.println("decryption: " + decryption);
+        System.out.println("____________________________________");
     }
 }
