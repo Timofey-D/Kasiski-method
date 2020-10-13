@@ -1,0 +1,94 @@
+
+F
+java:S1066º"/Merge this if statement with the enclosing one.(“‚ı’
+l	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´±üøÿÿÿÿ
+l	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´±üøÿÿÿÿ
+l	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´±üøÿÿÿÿ
+g	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŞÉ÷
+l	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´±üøÿÿÿÿ
+g	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŞÉ÷
+l	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ôä¤ûÿÿÿÿ
+l	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šË¨Åıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Şèóıÿÿÿÿ
+l
+java:S1149˜"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Â™†Šûÿÿÿÿ
+l
+java:S1149ˆ"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(üë€ùşÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ú¦ñ¦
+S
+java:S1854"8Remove this useless assignment to local variable "text".(ŸÈÈğûÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ò½øÖ
+Q	java:S125"<This block of commented-out lines of code should be removed.(¨ôÔÇ
+t
+java:S2293V"YReplace the type specification in this constructor call with the diamond operator ("<>").(îß‘æúÿÿÿÿ
+t
+java:S2293y"YReplace the type specification in this constructor call with the diamond operator ("<>").(åüÙÉùÿÿÿÿ
+g
+java:S3457Œ"Q%n should be used in place of \n to produce the platform-specific line separator.(‹•½
+i
+java:S3776—"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(²ú·
+W	java:S125È"<This block of commented-out lines of code should be removed.(ØãÜıÿÿÿÿ
+>
+java:S1905Ò"'Remove this unnecessary cast to "char".(ø”ïè
+>
+java:S1905Ò"'Remove this unnecessary cast to "char".(ø”ïè
+W	java:S125Ú"<This block of commented-out lines of code should be removed.(ØãÜıÿÿÿÿ
+C
+java:S1905å"'Remove this unnecessary cast to "char".(³ñ—ßûÿÿÿÿ
+C
+java:S1905å"'Remove this unnecessary cast to "char".(³ñ—ßûÿÿÿÿ
+W	java:S125î"<This block of commented-out lines of code should be removed.(ØãÜıÿÿÿÿ
+W	java:S125€"<This block of commented-out lines of code should be removed.(ØãÜıÿÿÿÿ
+g
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Ù»¸=
+h
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(›ÌİØ
+N
+java:S1854ª"7Remove this useless assignment to local variable "sum".(“Öë¾
+h
+java:S3457¯"Q%n should be used in place of \n to produce the platform-specific line separator.(¸¶Í
+m
+java:S3457±"Q%n should be used in place of \n to produce the platform-specific line separator.(Ÿîğ¬ùÿÿÿÿ
+A
+java:S3457±"%String contains no format specifiers.(Ÿîğ¬ùÿÿÿÿ
+@
+java:S5413Ê")Verify that "remove()" is used correctly.(†ƒ×µ
+E
+java:S1172Ó".Remove this unused method parameter "letters".(ñÊ¥
+i
+java:S3776Ó"RRefactor this method to reduce its Cognitive Complexity from 49 to the 15 allowed.(ñÊ¥
+d
+java:S1871ô"MThis branch's code block is the same as the block for the branch on line 366.(¨­€‚
+d
+java:S1871ñ"MThis branch's code block is the same as the block for the branch on line 368.(¿´áù
+d
+java:S1871÷"MThis branch's code block is the same as the block for the branch on line 374.(¿´áù
+n
+java:S3776…"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Ù˜Úûÿÿÿÿ
+?
+java:S1481ª"(Remove this unused "sum" local variable.(“Öë¾
+E
+java:S1481")Remove this unused "loop" local variable.(È‡ôÄûÿÿÿÿ
+K
+java:S1144"0Remove this unused private "encryptData" method.(¬Üáòıÿÿÿÿ
+Y
+java:S1144=">Remove this unused private "getDecryptionTextListKeys" method.(¨áç¿ıÿÿÿÿ
+X
+java:S1144‡"ARemove this unused private "getQuantityLettersInTextView" method.(Éƒë¬
+U
+java:S1144—">Remove this unused private "getDistanceBetweenLetters" method.(²ú·
+Q
+java:S1144Ì":Remove this unused private "getIndexOfCoincidence" method.(Æò»Ù
+Y
+java:S1144ß"BRemove this unused private "getIndexOfCoincidenceExpected" method.(’–ˆ¼
+d
+java:S1144ó"HRemove this unused private "getIndexOfCoincidenceExperimentally" method.(—„›«ÿÿÿÿÿ
+h
+java:S1144…"LRemove this unused private "getIndexOfCoincidenceExperimentallyView" method.(ÜÚ™ùÿÿÿÿ
+[
+java:S1144º"?Remove this unused private "getApproximateLettersOfKey" method.(ûéÓ©øÿÿÿÿ
+I
+java:S1144€"2Remove this unused private "getLengthText" method.(©æªä
+^
+java:S1144…"BRemove this unused private "getDistanceBetweenCombination" method.(Ù˜Úûÿÿÿÿ
