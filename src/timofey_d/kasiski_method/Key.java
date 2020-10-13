@@ -1,4 +1,4 @@
-package timofeyD.KasiskiMethod;
+package timofey_d.kasiski_method;
 
 public class Key {
     private String key;

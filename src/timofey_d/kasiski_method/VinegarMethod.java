@@ -1,8 +1,4 @@
-package timofeyD.KasiskiMethod;
-
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.TreeSet;
+package timofey_d.kasiski_method;
 
 public class VinegarMethod {
     private Text text;
@@ -54,12 +50,12 @@ public class VinegarMethod {
      * */
     private String encryptData(Text text, Key key, Alphabet language) {
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < text.getLength(); i++) {
+        for (int i = 0; i < text.getClearTextLength(); i++) {
             int cipherText = (language.getLetterPosition(text.toString().charAt(i)) + language.getLetterPosition(key.toString().charAt(i % key.getLength()))) % language.getAlphabetLength();
             if (language.capitalLetter(text.toString().charAt(i)))
                 result.append(language.getCapitalLetterByPosition(cipherText));
             else
-                result.append(language.getLowLetterByPosition(cipherText));
+                result.append(language.getLowerLetterByPosition(cipherText));
         }
         return recoverText(result).toString();
     }
@@ -70,13 +66,13 @@ public class VinegarMethod {
      * */
     private String decryptData(Text text, Key key, Alphabet language) {
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < text.getLength(); i++) {
+        for (int i = 0; i < text.getClearTextLength(); i++) {
             int difference = (language.getLetterPosition(text.toString().charAt(i)) - language.getLetterPosition(key.toString().charAt(i % key.getLength()))) ;
             int plainText = difference < 0 ? (difference + language.getAlphabetLength()) % language.getAlphabetLength() : (difference) % language.getAlphabetLength();
             if (language.capitalLetter(text.toString().charAt(i)))
                 result.append(language.getCapitalLetterByPosition(plainText));
             else
-                result.append(language.getLowLetterByPosition(plainText));
+                result.append(language.getLowerLetterByPosition(plainText));
         }
         return recoverText(result).toString();
     }
@@ -84,7 +80,7 @@ public class VinegarMethod {
     private StringBuilder recoverText(StringBuilder decryption) {
         for (int i = 0; i < text.getPrimaryText().length(); i++) {
             if ( !(language.capitalLetter(text.getPrimaryText().charAt(i)) ||
-                    language.lowLetter(text.getPrimaryText().charAt(i))) )
+                    language.lowerLetter(text.getPrimaryText().charAt(i))) )
                 decryption.insert(i, text.getPrimaryText().charAt(i));
         }
         return decryption;

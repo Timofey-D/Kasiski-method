@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="377.0" y="0.0">timofeyD.KasiskiMethod.Text</node>
+    <node x="648.0" y="431.0">timofeyD.KasiskiMethod.Main</node>
+    <node x="383.0" y="431.0">timofeyD.KasiskiMethod.Key</node>
+    <node x="0.0" y="0.0">timofeyD.KasiskiMethod.Alphabet</node>
+    <node x="0.0" y="431.0">timofeyD.KasiskiMethod.VinegarMethod</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="792.0" y="443.5" />
+  <SelectedNodes>
+    <node>timofeyD.KasiskiMethod.Key</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
